@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // prints 3 lines: (like 1-multi_languages.js) but by
-// using an array of string and a loop
+//  using an array of string and a loop
 
 const lang = 'C is fun';
 
