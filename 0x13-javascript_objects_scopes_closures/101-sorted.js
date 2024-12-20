@@ -1,11 +1,17 @@
 #!/usr/bin/node
 const dict = require('./101-data.js').dict;
-let newDict = {};
-for (let key in dict) {
-  if (newDict[dict[key]] === undefined) {
-    newDict[dict[key]] = [key];
-  } else {
-    newDict[dict[key]].push(key);
-  }
+const newDict = {};
+let k;
+for (k in dict) {
+  newDict[dict[k]] = [];
+}
+for (k in dict) {
+  newDict[dict[k]].push(k);
+}
+function cmp (a, b) {
+  return a - b;
+}
+for (k in newDict) {
+  newDict[k].sort(cmp);
 }
 console.log(newDict);
